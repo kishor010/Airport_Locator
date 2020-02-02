@@ -13,4 +13,5 @@ class Keys: NSObject {
     static var alertOK = "alertOK"
     static let loading = "loading"
     static let airportHome = "airportHome"
+    static let locator = "Locator"
 }

@@ -29,7 +29,7 @@ class ALMapViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "Locator"
+        self.title = Utils.localizedString(forKey:Keys.locator, table: nil)
         locationManagerSetup()
         dertermineCurrentLocation()
     }
@@ -37,9 +37,7 @@ class ALMapViewController: UIViewController {
     //MARK: INITIAL SETUP
     private func locationManagerSetup() {
         self.locationManager?.requestAlwaysAuthorization()
-        // For use in foreground
         self.locationManager?.requestWhenInUseAuthorization()
-        //dertermineLocation()
         mapView.delegate = self
         mapView.mapType = .hybrid
         mapView.isZoomEnabled = true
