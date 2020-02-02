@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2cL-od-6Wf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AirportLocator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wVJ-2s-Qzq">
+                                <rect key="frame" x="20" y="408" width="374" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pg-Rj-dh3">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Airport Locator"/>
+                                        <connections>
+                                            <action selector="btnAirportLocatorTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UR7-aQ-hdT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6Pg-Rj-dh3" secondAttribute="bottom" id="GHG-iv-lRx"/>
+                                    <constraint firstItem="6Pg-Rj-dh3" firstAttribute="leading" secondItem="wVJ-2s-Qzq" secondAttribute="leading" id="NwS-Hm-LvR"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Pg-Rj-dh3" secondAttribute="trailing" id="ldW-Oy-9Ay"/>
+                                    <constraint firstItem="6Pg-Rj-dh3" firstAttribute="top" secondItem="wVJ-2s-Qzq" secondAttribute="top" id="oc9-v1-ynv"/>
+                                    <constraint firstAttribute="height" constant="80" id="xZN-Rn-Gqv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wVJ-2s-Qzq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hTb-Dz-1GF"/>
+                            <constraint firstItem="wVJ-2s-Qzq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lek-lr-pgw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wVJ-2s-Qzq" secondAttribute="trailing" constant="20" id="o4t-KF-479"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tnk-pR-M5I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="117"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="S96-48-NTj">
+            <objects>
+                <viewController storyboardIdentifier="ALMapViewController" id="WZm-8f-z84" customClass="ALMapViewController" customModule="AirportLocator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u2y-x0-5Mu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Per-Kb-9Cl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nP3-FU-6fX">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    </mapView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="nP3-FU-6fX" firstAttribute="top" secondItem="Per-Kb-9Cl" secondAttribute="top" id="AIl-PW-d0p"/>
+                                    <constraint firstAttribute="bottom" secondItem="nP3-FU-6fX" secondAttribute="bottom" id="lbX-v9-ua3"/>
+                                    <constraint firstItem="nP3-FU-6fX" firstAttribute="leading" secondItem="Per-Kb-9Cl" secondAttribute="leading" id="rUr-Di-LxP"/>
+                                    <constraint firstAttribute="trailing" secondItem="nP3-FU-6fX" secondAttribute="trailing" id="tAc-iA-63p"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Per-Kb-9Cl" firstAttribute="leading" secondItem="E21-Jh-pxX" secondAttribute="leading" id="3ZG-WI-6ZH"/>
+                            <constraint firstItem="Per-Kb-9Cl" firstAttribute="bottom" secondItem="E21-Jh-pxX" secondAttribute="bottom" constant="34" id="JO5-dT-ify"/>
+                            <constraint firstItem="E21-Jh-pxX" firstAttribute="top" secondItem="Per-Kb-9Cl" secondAttribute="topMargin" constant="-8" id="ahm-Xy-QED"/>
+                            <constraint firstItem="E21-Jh-pxX" firstAttribute="trailing" secondItem="Per-Kb-9Cl" secondAttribute="trailing" id="h72-sn-IaY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E21-Jh-pxX"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="nP3-FU-6fX" id="cuP-r3-xF4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nGh-fq-rBa" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705.7971014492755" y="110.49107142857143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VWF-hf-5w4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2cL-od-6Wf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sc0-0q-CqK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pRD-1i-9HR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kms-jN-q1n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+</document>

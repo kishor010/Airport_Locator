@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E82D507F5CB3779B28A2CFF /* Pods_AirportLocator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911D7690818A17604E659206 /* Pods_AirportLocator.framework */; };
+		8CAFA0D4B1DF88AF3D32A99A /* Pods_AirportLocatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C1E07B748566DD2405F7E6 /* Pods_AirportLocatorTests.framework */; };
+		8D4F53B79204FE408AF644A0 /* Pods_AirportLocatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F347D2CBD271591F31FAAC2 /* Pods_AirportLocatorUITests.framework */; };
 		F931557523E714BF000673FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F931557423E714BF000673FE /* AppDelegate.swift */; };
-		F931557723E714BF000673FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F931557623E714BF000673FE /* SceneDelegate.swift */; };
 		F931557923E714BF000673FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F931557823E714BF000673FE /* ViewController.swift */; };
 		F931557C23E714BF000673FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F931557A23E714BF000673FE /* Main.storyboard */; };
 		F931557F23E714BF000673FE /* AirportLocator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F931557D23E714BF000673FE /* AirportLocator.xcdatamodeld */; };
@@ -16,6 +18,17 @@
 		F931558423E714C1000673FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F931558223E714C1000673FE /* LaunchScreen.storyboard */; };
 		F931558F23E714C1000673FE /* AirportLocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F931558E23E714C1000673FE /* AirportLocatorTests.swift */; };
 		F931559A23E714C1000673FE /* AirportLocatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F931559923E714C1000673FE /* AirportLocatorUITests.swift */; };
+		F93155AD23E718FB000673FE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93155AA23E718FB000673FE /* Utils.swift */; };
+		F93155AE23E718FB000673FE /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93155AB23E718FB000673FE /* Keys.swift */; };
+		F93155AF23E718FB000673FE /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93155AC23E718FB000673FE /* ProgressIndicator.swift */; };
+		F93155B123E7195A000673FE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F93155B023E7195A000673FE /* Localizable.strings */; };
+		F93155B323E71B64000673FE /* ALMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93155B223E71B64000673FE /* ALMapViewController.swift */; };
+		F93155B823E748F7000673FE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93155B523E748F7000673FE /* NetworkManager.swift */; };
+		F93155B923E748F7000673FE /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93155B623E748F7000673FE /* NetworkRouter.swift */; };
+		F971223E23E74F2C0021E4B9 /* AirportListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F971223823E74F2C0021E4B9 /* AirportListModel.swift */; };
+		F971223F23E74F2C0021E4B9 /* ALMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F971223A23E74F2C0021E4B9 /* ALMapService.swift */; };
+		F971224023E74F2C0021E4B9 /* APICallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F971223B23E74F2C0021E4B9 /* APICallManager.swift */; };
+		F971224123E74F2C0021E4B9 /* ALMapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F971223D23E74F2C0021E4B9 /* ALMapPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +49,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08AF76CA4F4D9EDEFB8378F4 /* Pods-AirportLocatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirportLocatorUITests.release.xcconfig"; path = "Target Support Files/Pods-AirportLocatorUITests/Pods-AirportLocatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		23C1E07B748566DD2405F7E6 /* Pods_AirportLocatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirportLocatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CC2E0F12EC38B49C3C9DFCA /* Pods-AirportLocator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirportLocator.debug.xcconfig"; path = "Target Support Files/Pods-AirportLocator/Pods-AirportLocator.debug.xcconfig"; sourceTree = "<group>"; };
+		2EC1EFB7C9AEE43929E0803E /* Pods-AirportLocatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirportLocatorUITests.debug.xcconfig"; path = "Target Support Files/Pods-AirportLocatorUITests/Pods-AirportLocatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		55B1C8C956928F0B40AB0AE9 /* Pods-AirportLocator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirportLocator.release.xcconfig"; path = "Target Support Files/Pods-AirportLocator/Pods-AirportLocator.release.xcconfig"; sourceTree = "<group>"; };
+		6C65D648A6D78165B3DEAA1B /* Pods-AirportLocatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirportLocatorTests.debug.xcconfig"; path = "Target Support Files/Pods-AirportLocatorTests/Pods-AirportLocatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F347D2CBD271591F31FAAC2 /* Pods_AirportLocatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirportLocatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		911D7690818A17604E659206 /* Pods_AirportLocator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirportLocator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE4DD30EA869C71FE8CB58D /* Pods-AirportLocatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirportLocatorTests.release.xcconfig"; path = "Target Support Files/Pods-AirportLocatorTests/Pods-AirportLocatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		F931557123E714BF000673FE /* AirportLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirportLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F931557423E714BF000673FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F931557623E714BF000673FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F931557823E714BF000673FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F931557B23E714BF000673FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F931557E23E714BF000673FE /* AirportLocator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AirportLocator.xcdatamodel; sourceTree = "<group>"; };
@@ -51,6 +72,17 @@
 		F931559523E714C1000673FE /* AirportLocatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirportLocatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F931559923E714C1000673FE /* AirportLocatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportLocatorUITests.swift; sourceTree = "<group>"; };
 		F931559B23E714C1000673FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93155AA23E718FB000673FE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F93155AB23E718FB000673FE /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		F93155AC23E718FB000673FE /* ProgressIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		F93155B023E7195A000673FE /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F93155B223E71B64000673FE /* ALMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALMapViewController.swift; sourceTree = "<group>"; };
+		F93155B523E748F7000673FE /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F93155B623E748F7000673FE /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		F971223823E74F2C0021E4B9 /* AirportListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportListModel.swift; sourceTree = "<group>"; };
+		F971223A23E74F2C0021E4B9 /* ALMapService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALMapService.swift; sourceTree = "<group>"; };
+		F971223B23E74F2C0021E4B9 /* APICallManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICallManager.swift; sourceTree = "<group>"; };
+		F971223D23E74F2C0021E4B9 /* ALMapPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALMapPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E82D507F5CB3779B28A2CFF /* Pods_AirportLocator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAFA0D4B1DF88AF3D32A99A /* Pods_AirportLocatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +106,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D4F53B79204FE408AF644A0 /* Pods_AirportLocatorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D5E589AE8B3672FCF2628A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				911D7690818A17604E659206 /* Pods_AirportLocator.framework */,
+				23C1E07B748566DD2405F7E6 /* Pods_AirportLocatorTests.framework */,
+				7F347D2CBD271591F31FAAC2 /* Pods_AirportLocatorUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7080A8E962EBCF2C8AE3ADD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CC2E0F12EC38B49C3C9DFCA /* Pods-AirportLocator.debug.xcconfig */,
+				55B1C8C956928F0B40AB0AE9 /* Pods-AirportLocator.release.xcconfig */,
+				6C65D648A6D78165B3DEAA1B /* Pods-AirportLocatorTests.debug.xcconfig */,
+				CDE4DD30EA869C71FE8CB58D /* Pods-AirportLocatorTests.release.xcconfig */,
+				2EC1EFB7C9AEE43929E0803E /* Pods-AirportLocatorUITests.debug.xcconfig */,
+				08AF76CA4F4D9EDEFB8378F4 /* Pods-AirportLocatorUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F931556823E714BF000673FE = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +143,8 @@
 				F931558D23E714C1000673FE /* AirportLocatorTests */,
 				F931559823E714C1000673FE /* AirportLocatorUITests */,
 				F931557223E714BF000673FE /* Products */,
+				D7080A8E962EBCF2C8AE3ADD /* Pods */,
+				4D5E589AE8B3672FCF2628A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,13 +162,15 @@
 			isa = PBXGroup;
 			children = (
 				F931557423E714BF000673FE /* AppDelegate.swift */,
-				F931557623E714BF000673FE /* SceneDelegate.swift */,
 				F931557823E714BF000673FE /* ViewController.swift */,
-				F931557A23E714BF000673FE /* Main.storyboard */,
 				F931558023E714C1000673FE /* Assets.xcassets */,
-				F931558223E714C1000673FE /* LaunchScreen.storyboard */,
 				F931558523E714C1000673FE /* Info.plist */,
 				F931557D23E714BF000673FE /* AirportLocator.xcdatamodeld */,
+				F93155B023E7195A000673FE /* Localizable.strings */,
+				F93155A823E7182B000673FE /* App-UI */,
+				F93155A723E7180F000673FE /* AirportLocator */,
+				F93155A923E718D3000673FE /* Helper */,
+				F93155B423E748E1000673FE /* Services */,
 			);
 			path = AirportLocator;
 			sourceTree = "<group>";
@@ -131,6 +193,78 @@
 			path = AirportLocatorUITests;
 			sourceTree = "<group>";
 		};
+		F93155A723E7180F000673FE /* AirportLocator */ = {
+			isa = PBXGroup;
+			children = (
+				F971223723E74F2C0021E4B9 /* Model */,
+				F971223C23E74F2C0021E4B9 /* Presenter */,
+				F971223923E74F2C0021E4B9 /* Services */,
+				F971223623E74AD10021E4B9 /* Controller */,
+			);
+			path = AirportLocator;
+			sourceTree = "<group>";
+		};
+		F93155A823E7182B000673FE /* App-UI */ = {
+			isa = PBXGroup;
+			children = (
+				F931558223E714C1000673FE /* LaunchScreen.storyboard */,
+				F931557A23E714BF000673FE /* Main.storyboard */,
+			);
+			path = "App-UI";
+			sourceTree = "<group>";
+		};
+		F93155A923E718D3000673FE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F93155AB23E718FB000673FE /* Keys.swift */,
+				F93155AC23E718FB000673FE /* ProgressIndicator.swift */,
+				F93155AA23E718FB000673FE /* Utils.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F93155B423E748E1000673FE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F93155B623E748F7000673FE /* NetworkRouter.swift */,
+				F93155B523E748F7000673FE /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F971223623E74AD10021E4B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F93155B223E71B64000673FE /* ALMapViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F971223723E74F2C0021E4B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F971223823E74F2C0021E4B9 /* AirportListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F971223923E74F2C0021E4B9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F971223A23E74F2C0021E4B9 /* ALMapService.swift */,
+				F971223B23E74F2C0021E4B9 /* APICallManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F971223C23E74F2C0021E4B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F971223D23E74F2C0021E4B9 /* ALMapPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F931559E23E714C1000673FE /* Build configuration list for PBXNativeTarget "AirportLocator" */;
 			buildPhases = (
+				BDC2E55A958AF52BBC5E6624 /* [CP] Check Pods Manifest.lock */,
 				F931556D23E714BF000673FE /* Sources */,
 				F931556E23E714BF000673FE /* Frameworks */,
 				F931556F23E714BF000673FE /* Resources */,
+				6DAFF5A4A5BC6252862418CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +291,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F93155A123E714C1000673FE /* Build configuration list for PBXNativeTarget "AirportLocatorTests" */;
 			buildPhases = (
+				03431A935FF45A33EF8C222E /* [CP] Check Pods Manifest.lock */,
 				F931558623E714C1000673FE /* Sources */,
 				F931558723E714C1000673FE /* Frameworks */,
 				F931558823E714C1000673FE /* Resources */,
@@ -173,6 +310,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F93155A423E714C1000673FE /* Build configuration list for PBXNativeTarget "AirportLocatorUITests" */;
 			buildPhases = (
+				5E3F19107A402E870496D817 /* [CP] Check Pods Manifest.lock */,
 				F931559123E714C1000673FE /* Sources */,
 				F931559223E714C1000673FE /* Frameworks */,
 				F931559323E714C1000673FE /* Resources */,
@@ -236,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F931558423E714C1000673FE /* LaunchScreen.storyboard in Resources */,
+				F93155B123E7195A000673FE /* Localizable.strings in Resources */,
 				F931558123E714C1000673FE /* Assets.xcassets in Resources */,
 				F931557C23E714BF000673FE /* Main.storyboard in Resources */,
 			);
@@ -257,15 +396,110 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03431A935FF45A33EF8C222E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirportLocatorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E3F19107A402E870496D817 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirportLocatorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DAFF5A4A5BC6252862418CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AirportLocator/Pods-AirportLocator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AirportLocator/Pods-AirportLocator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AirportLocator/Pods-AirportLocator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDC2E55A958AF52BBC5E6624 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirportLocator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F931556D23E714BF000673FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F971223F23E74F2C0021E4B9 /* ALMapService.swift in Sources */,
+				F93155B823E748F7000673FE /* NetworkManager.swift in Sources */,
+				F93155AF23E718FB000673FE /* ProgressIndicator.swift in Sources */,
+				F93155AD23E718FB000673FE /* Utils.swift in Sources */,
+				F971224123E74F2C0021E4B9 /* ALMapPresenter.swift in Sources */,
+				F971224023E74F2C0021E4B9 /* APICallManager.swift in Sources */,
+				F93155AE23E718FB000673FE /* Keys.swift in Sources */,
 				F931557F23E714BF000673FE /* AirportLocator.xcdatamodeld in Sources */,
+				F971223E23E74F2C0021E4B9 /* AirportListModel.swift in Sources */,
 				F931557923E714BF000673FE /* ViewController.swift in Sources */,
 				F931557523E714BF000673FE /* AppDelegate.swift in Sources */,
-				F931557723E714BF000673FE /* SceneDelegate.swift in Sources */,
+				F93155B923E748F7000673FE /* NetworkRouter.swift in Sources */,
+				F93155B323E71B64000673FE /* ALMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +604,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -424,7 +658,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -436,10 +670,12 @@
 		};
 		F931559F23E714C1000673FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CC2E0F12EC38B49C3C9DFCA /* Pods-AirportLocator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AirportLocator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,10 +689,12 @@
 		};
 		F93155A023E714C1000673FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55B1C8C956928F0B40AB0AE9 /* Pods-AirportLocator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AirportLocator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,6 +708,7 @@
 		};
 		F93155A223E714C1000673FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C65D648A6D78165B3DEAA1B /* Pods-AirportLocatorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +730,7 @@
 		};
 		F93155A323E714C1000673FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDE4DD30EA869C71FE8CB58D /* Pods-AirportLocatorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +752,7 @@
 		};
 		F93155A523E714C1000673FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EC1EFB7C9AEE43929E0803E /* Pods-AirportLocatorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -531,6 +772,7 @@
 		};
 		F93155A623E714C1000673FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08AF76CA4F4D9EDEFB8378F4 /* Pods-AirportLocatorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

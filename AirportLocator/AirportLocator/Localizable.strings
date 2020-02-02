@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  AirportLocator
+
+  Created by Kishor Pahalwani on 02/02/20.
+  Copyright © 2020 Kishor Pahalwani. All rights reserved.
+*/
+"alertOK" = "OK";
+"loading" = "Loading..";
+"airportHome" = "Airport Home";
