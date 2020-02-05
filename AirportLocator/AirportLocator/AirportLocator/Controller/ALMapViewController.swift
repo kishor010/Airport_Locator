@@ -43,14 +43,14 @@ class ALMapViewController: UIViewController {
         mapView.isZoomEnabled = true
         mapView.isScrollEnabled = true
         mapView.showsUserLocation = true
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
         presenter?.attachView(view: self)
     }
     
     //MARK: ALLOW ACCESS FOR CURRENT LOCATION
     private func dertermineCurrentLocation() {
         if CLLocationManager.locationServicesEnabled() {
-            locationManager?.delegate = self
-            locationManager?.desiredAccuracy = kCLLocationAccuracyBest
             locationManager?.startUpdatingLocation()
             switch CLLocationManager.authorizationStatus() {
             case .notDetermined, .restricted, .denied:
@@ -80,7 +80,6 @@ extension ALMapViewController: CLLocationManagerDelegate, MKMapViewDelegate {
         let center = CLLocationCoordinate2D(latitude: locValue.latitude, longitude: locValue.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.075, longitudeDelta: 0.075))
         mapView.setRegion(region, animated: true)
-       
     }
     
     //MARK: MKMapViewDelegate
@@ -98,6 +97,13 @@ extension ALMapViewController: CLLocationManagerDelegate, MKMapViewDelegate {
         }
 
         return annotationView
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    
+        if status == .authorizedAlways || status == .authorizedWhenInUse {
+            dertermineCurrentLocation()
+        }
     }
 }
     
@@ -130,17 +136,14 @@ extension ALMapViewController: MapControllerView {
     }
     
     func startLoading() {
-        // Show your loader
         showProgressIndicator(view: self.view)
     }
     
     func finishLoading() {
-        // Dismiss your loader
         hideProgressIndicator(view: self.view)
     }
     
     func showError(errorMessage: String) {
-        // show error loader
         Utils.showAlert(AlertTitle: errorMessage, AlertMessage: "", controller: self)
     }
 }
