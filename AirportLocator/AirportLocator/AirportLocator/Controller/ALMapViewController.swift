@@ -50,25 +50,28 @@ class ALMapViewController: UIViewController {
     
     //MARK: ALLOW ACCESS FOR CURRENT LOCATION
     private func dertermineCurrentLocation() {
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager?.startUpdatingLocation()
-            switch CLLocationManager.authorizationStatus() {
-            case .notDetermined, .restricted, .denied:
-                self.currentLatitude = "0.0"
-                self.currentLongitude = "0.0"
-            case .authorizedAlways, .authorizedWhenInUse:
-                guard let currentLocation = locationManager?.location else {
-                    return
+        DispatchQueue.global().async {
+            if CLLocationManager.locationServicesEnabled() {
+                self.locationManager?.startUpdatingLocation()
+                let manager = CLLocationManager()
+                switch manager.authorizationStatus {
+                case .notDetermined, .restricted, .denied:
+                    self.currentLatitude = "0.0"
+                    self.currentLongitude = "0.0"
+                case .authorizedAlways, .authorizedWhenInUse:
+                    guard let currentLocation = self.locationManager?.location else {
+                        return
+                    }
+                    self.currentLatitude = String(currentLocation.coordinate.latitude)
+                    self.currentLongitude = String(currentLocation.coordinate.longitude)
+                    self.presenter?.airportListAPI(latitude: self.currentLatitude ?? "0.0",longitude: self.currentLongitude ?? "0.0")
+                    
+                @unknown default:
+                    print("Location services are not enabled")
                 }
-                self.currentLatitude = String(currentLocation.coordinate.latitude)
-                self.currentLongitude = String(currentLocation.coordinate.longitude)
-                presenter?.airportListAPI(latitude:currentLatitude ?? "0.0",longitude:currentLongitude ?? "0.0")
-                
-            @unknown default:
+            } else {
                 print("Location services are not enabled")
             }
-        } else {
-            print("Location services are not enabled")
         }
     }
 }
