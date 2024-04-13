@@ -7,7 +7,7 @@ target 'AirportLocator' do
 
   # Pods for AirportLocator
   pod 'SwiftyJSON'
-  pod 'Alamofire', '4.9.0'
+  pod 'Alamofire'
 
   target 'AirportLocatorTests' do
     inherit! :search_paths

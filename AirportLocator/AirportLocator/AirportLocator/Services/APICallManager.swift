@@ -27,7 +27,7 @@ class APICallManager {
         let url = API_BASE_URL + "json?location=" + latitude + "," + longitude + "&radius=5000&keyword=airport&key=" + key
         
         // Build Headers
-        let airportListHeaders = ["Content-Type": "application/json"]
+        let airportListHeaders: HTTPHeaders = ["Content-Type": "application/json"]
         
         // call API
         self.createRequest(
@@ -55,13 +55,13 @@ class APICallManager {
     func createRequest(
         _ url: String,
         method: HTTPMethod,
-        headers: [String: String]?,
+        headers: HTTPHeaders,
         parameters: Parameters? = nil,
         onSuccess successCallback: ((JSON) -> Void)?,
         onFailure failureCallback: ((String) -> Void)?
         ) {
         
-        Alamofire.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate(statusCode: 200..<300).responseJSON { response in
+        AF.request(url, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate(statusCode: 200..<300).responseJSON { response in
             
             switch response.result {
             case .success(let value):
